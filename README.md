@@ -32,6 +32,7 @@ git clone https://github.com/DarthFelus/AD56XX-DAC-Library.git
 ## Usage
 
 1. Initialization
+
 	Include the header file AD56XX.h in your project:
 	
     ```c
@@ -49,7 +50,7 @@ git clone https://github.com/DarthFelus/AD56XX-DAC-Library.git
 							AD5663);            // DAC model (16-bit)
     ```
 
-2. Writing and Updating DAC Values
+3. Writing and Updating DAC Values
 	To send data to the DAC, use the AD56XX_Write() function. This function allows you to specify the DAC command, address, and data.
 
     ```c
@@ -66,7 +67,7 @@ git clone https://github.com/DarthFelus/AD56XX-DAC-Library.git
 	AD56XX_WriteUpdateChannel(&dac_handle, AD56XX_DAC_A, 4096);
 	```
 	
-3. LDAC and CLR Pin Control
+4. LDAC and CLR Pin Control
 
 	Control the LDAC and CLR pins to latch or clear the DAC registers:
 	
@@ -78,7 +79,7 @@ git clone https://github.com/DarthFelus/AD56XX-DAC-Library.git
 	AD56XX_ControlCLR(&dac_handle, GPIO_PIN_SET);
 	```
 	
-4. 	Resetting the DAC
+5. 	Resetting the DAC
 	
 	You can reset the DAC registers using the AD56XX_Reset() function with the desired reset mode.
 	```c
@@ -86,7 +87,7 @@ git clone https://github.com/DarthFelus/AD56XX-DAC-Library.git
 	AD56XX_Reset(&dac_handle, AD56XX_SOFTWARE_RESET);
 	```
 	
-5. Power Down Mode
+6. Power Down Mode
 
 	You can set the DAC to enter a power-down mode using AD56XX_PowerDown():
 	```c
@@ -94,7 +95,7 @@ git clone https://github.com/DarthFelus/AD56XX-DAC-Library.git
 	AD56XX_PowerDown(&dac_handle, AD56XX_POWER_MODE_1KOHM, AD56XX_DAC_A);
 	```
 
-6. Reference mode
+7. Reference mode
 	You can configure the internal reference mode for the DAC using AD56XX_SetRef():
 	
 	```c
