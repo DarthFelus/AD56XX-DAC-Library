@@ -56,16 +56,16 @@ git clone https://github.com/DarthFelus/AD56XX-DAC-Library.git
 
     ```c
     // Write data to the DAC
-	AD56XX_Write(&dac_handle, AD56XX_CMD_WRITE_INPUT_REG, AD56XX_DAC_A, 2048);
+	AD56XX_Write(&dac_handle, AD56XX_CMD_WRITE_INPUT_REG, DAC_A, 2048);
 
 	// Update the DAC register
-	AD56XX_UpdateReg(&dac_handle, AD56XX_DAC_A, 2048);
+	AD56XX_UpdateReg(&dac_handle, DAC_A, 2048);
     ```
 	
 	To write and update the DAC channel in one command:
 	```c
 	// Write and update DAC channel
-	AD56XX_WriteUpdateChannel(&dac_handle, AD56XX_DAC_A, 4096);
+	AD56XX_WriteUpdateChannel(&dac_handle, DAC_A, 4096);
 	```
 	
 3. LDAC and CLR Pin Control
@@ -85,7 +85,7 @@ git clone https://github.com/DarthFelus/AD56XX-DAC-Library.git
 	You can reset the DAC registers using the AD56XX_Reset() function with the desired reset mode.
 	```c
 	// Reset DAC registers
-	AD56XX_Reset(&dac_handle, AD56XX_SOFTWARE_RESET);
+	AD56XX_Reset(&dac_handle, FullReset);
 	```
 	
 5. Power Down Mode
@@ -93,7 +93,7 @@ git clone https://github.com/DarthFelus/AD56XX-DAC-Library.git
 	You can set the DAC to enter a power-down mode using AD56XX_PowerDown():
 	```c
 	// Power down DAC channel A to 1kOhm to GND mode
-	AD56XX_PowerDown(&dac_handle, AD56XX_POWER_MODE_1KOHM, AD56XX_DAC_A);
+	AD56XX_PowerDown(&dac_handle, PowerDown1kOhm, DAC_A);
 	```
 
 6. Reference mode
@@ -126,10 +126,10 @@ int main(void) {
                               AD5663);            // DAC model (16-bit)
     
     // Write a value to DAC channel A
-    AD56XX_Write(&dac_handle, AD56XX_CMD_WRITE_INPUT_REG, AD56XX_DAC_A, 2048);
+    AD56XX_Write(&dac_handle, AD56XX_CMD_WRITE_INPUT_REG, DAC_A, 2048);
     
     // Update DAC channel A with a new value
-    AD56XX_UpdateReg(&dac_handle, AD56XX_DAC_A, 4096);
+    AD56XX_UpdateReg(&dac_handle, DAC_A, 4096);
     
     // Main loop
     while (1) {
