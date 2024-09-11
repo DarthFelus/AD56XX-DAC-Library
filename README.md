@@ -3,7 +3,7 @@
 
 ## Overview
 
-This library is designed for STM32 microcontrollers to interface with the Analog Devices AD56XX family of DACs. It supports DAC models like AD5623R (12-bit), AD5643R (14-bit), and AD5663R (16-bit) via SPI communication. The library provides functions to initialize the DAC, transmit data, control LDAC and CLR pins, and perform various DAC operations such as reset and power down.
+This library is designed for STM32 microcontrollers to interface with the Analog Devices AD56XX family of DACs. It supports DAC models like AD5623R (12-bit), AD5643R (14-bit), and AD5663R (16-bit) via SPI communication. The library provides functions to initialize the DAC, transmit data, control LDAC and CLR pins, and perform various DAC operations such as reset, power down or internal reference.
 
 ## Features
 
