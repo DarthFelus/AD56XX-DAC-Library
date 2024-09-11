@@ -101,7 +101,8 @@ git clone https://github.com/DarthFelus/AD56XX-DAC-Library.git
 	// Set Reference mode on
 	AD56XX_SetRef(&dac_handle, ReferenceOn);
 	```
-	
+
+ And other specified functions, described on datasheets work here. See details on AD56XX.c.
 ### Example Code
 
 ```c
